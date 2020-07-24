@@ -8,9 +8,6 @@ app.secret_key = 'hello'
 app.permanent_session_lifetime = timedelta(minutes=5)
 
 
-
-
-
 @app.route('/', methods=['POST','GET'])
 def home():
     if request.method == 'POST':
@@ -31,6 +28,24 @@ def home():
     return render_template('index.html', assignee=assignee, reporter=reporter, account_id=account_id, summary=summary)
 
 
+@app.route('/search-number', methods=['POST','GET'])
+def search_number():
+    if request.method == 'POST':
+      num = request.form['key']
+      search_data = record_search(num)
+      assignee = search_data['assignee']
+      reporter = search_data['reporter']
+      account_id = search_data['account_id']
+      summary = search_data['summary']
+      flash('Record Found')
+    else:
+        search_data = record_search(num='4000')
+        assignee = search_data['assignee']
+        reporter = search_data['reporter']
+        account_id = search_data['account_id']
+        summary = search_data['summary']
+        
+    return render_template('search-number.html', assignee=assignee, reporter=reporter, account_id=account_id, summary=summary)
 
 
 
