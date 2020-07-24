@@ -1,0 +1,6 @@
+*.csv
+bin/
+include/
+lib/
+src/
+__pycache__/
