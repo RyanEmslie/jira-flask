@@ -37,13 +37,13 @@
             </ul>
         </div>
         <div class="col-md-8 order-md-1">
+            <pre>{{ i }}</pre>
 
-                <h2>FSUPPORT-{{num}}</h2>
+             <pre>   <h2>FSUPPORT-{{num}}</h2></pre>
                 <hr>
-                <h5>{{summary}}</h5>
-                <p>{{description}}</p>
-                {% for i in commentsArr %}
-                 <pre>   <p>{{ i }}</p></pre>
+                <pre><h5>{{summary}}</h5></pre>
+               <pre> <p>{{description}}</pre>
+               <pre> {% for i in commentsArr %}</pre>
                 {% endfor %}
         </div>
     </div>
