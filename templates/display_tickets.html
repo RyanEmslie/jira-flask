@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<div class='container'>
+  <div class="row">
+    <form action='{{ url_for("search_text")}}' method='post' class="form-inline my-2 my-lg-0">
+      <!-- <label for="text_string">Text Search</label> -->
+      <input class="form-control mr-sm-2" type="search" name='text_string'
+             placeholder="...SME" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0"
+              type="submit">Search</button>
+  </form>
+  </div>
+    <div class="row">
+        <div >
+            <table class="table table-light">
+                <thead>
+                  <tr>
+                    <th class='text-align' scope="col">Ticket Number</th>
+                    <th class='text-align' scope="col">Summary</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for ticket in tickets %}
+                    <tr>
+                        <td><a href="/{{ticket[2]}}">{{ticket[0]}}</a></td>
+                        <td>{{ticket[1]}}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+table {
+    margin-top: 50px;
+}
+
+th {
+    text-align: center;
+}
+
+th, td {
+    background-color: #e8e8e8;
+}
+
+form {
+    background-color: #e8e8e8;
+    color:black;
+    padding:10px;
+    margin: auto;
+}
+
+
+p {
+    background-color: #b1b1b1;
+    color:black;
+    padding:10px;
+}
+
+nav {
+    margin:10px 10px 50px 10px;
+}
+nav, table, form{
+    /* box-shadow:         3px 3px 5px 6px rgb(180, 180, 180); */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+
+ .btn-outline-success {
+    color: #2883a7;
+    border-color: #2883a7;
+}

@@ -14,7 +14,10 @@
                 <li class="list-group-item d-flex">
                     <div>
                         <small class="text-muted">Assignee</small>
-                        <h6 class="my-0">{{assignee}}</h6>
+                        <h6 class="my-0">{% if assignee %}   
+                            {{ assignee }}
+                        {% else %}      
+                        {%endif %}</h6>
                     </div>
                 </li>
                 <li class="list-group-item d-flex">
@@ -26,18 +29,22 @@
                 <li class="list-group-item d-flex">
                     <div>
                         <small class="text-muted">Account ID</small>
-                        <h6 class="my-0">{{account_id}}</h6>
+                        <h6 class="my-0">{{account_id}}   
+                   </h6>
                     </div>
                 </li>
 
             </ul>
         </div>
         <div class="col-md-8 order-md-1">
-            <h4>{{summary}}</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
-                debitis modi magnam dolores nesciunt minima voluptatum quaerat
-                dolore natus maiores, architecto repudiandae veniam alias
-                adipisci eos, tempore expedita labore incidunt.</p>
+
+                <h2>FSUPPORT-{{num}}</h2>
+                <hr>
+                <h5>{{summary}}</h5>
+                <p>{{description}}</p>
+                {% for i in commentsArr %}
+                 <pre>   <p>{{ i }}</p></pre>
+                {% endfor %}
         </div>
     </div>
 </div>
