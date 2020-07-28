@@ -1,39 +1,83 @@
+.row {
+  margin: auto;
+}
+
 table {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 th {
-    text-align: center;
+  text-align: center;
 }
 
-th, td {
-    background-color: #e8e8e8;
+th,
+td {
+  background-color: #e8e8e8;
+}
+
+td#attachment {
+  text-align: center;
+}
+
+pre {
+  background-color: #e8e8e8;
+  padding: 10px;
+  margin-top: 40px;
 }
 
 form {
-    background-color: #e8e8e8;
-    color:black;
-    padding:10px;
-    margin: auto;
+  background-color: #e8e8e8;
+  color: black;
+  padding: 10px;
+  margin: auto;
 }
 
+p,
+h2,
+h5 {
+  background-color: #e8e8e8;
+  color: black;
+  padding: 10px;
 
-p {
-    background-color: #e8e8e8;
-    color:black;
-    padding:10px;
-    overflow: scroll;
+  /* overflow: scroll; */
 }
 
 nav {
-    margin:10px 10px 50px 10px;
+  margin: 10px 10px 50px 10px;
 }
-nav, table, form, p{
-    /* box-shadow:         3px 3px 5px 6px rgb(180, 180, 180); */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
- }
+nav,
+table,
+form,
+p,
+pre,
+h2,
+.list-group {
+  /* box-shadow:         3px 3px 5px 6px rgb(180, 180, 180); */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
- .btn-outline-success {
-    color: #2883a7;
-    border-color: #2883a7;
+.btn-outline-success {
+  color: #2883a7;
+  border-color: #2883a7;
+}
+
+.btn-outline-success:hover {
+  color: white;
+  border-color: #2883a7;
+  background-color: #2883a7;
+}
+.list-group {
+  background-color: #e8e8e8;
+  margin: 30px auto;
+}
+
+.list-group li {
+  background-color: #e8e8e8;
+}
+
+/* .form-text-search {
+    box-shadow: none;
+} */
+.list-group-item {
+  border: none;
 }

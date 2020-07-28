@@ -8,6 +8,11 @@ verify_ssl = true
 [packages]
 flask = "*"
 pandas = "*"
+requests = "*"
+urllib = "*"
+urllib3 = "*"
+shutil = "*"
+chain = "*"
 
 [requires]
 python_version = "3.7"

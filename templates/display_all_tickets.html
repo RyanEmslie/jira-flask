@@ -3,7 +3,7 @@
 {% block content %}
 <div class='container'>
     <div class="row">
-        <div >
+        <div class='col'>
             <table class="table table-light">
                 <thead>
                   <tr>
@@ -14,7 +14,7 @@
                 <tbody>
                     {% for ticket in tickets %}
                     <tr>
-                        <td><a href="/{{ticket[2]}}">{{ticket[0]}}</a></td>
+                        <td><a href="/ticket/{{ticket[2]}}">{{ticket[0]}}</a></td>
                         <td>{{ticket[1]}}</td>
                     </tr>
                 {% endfor %}

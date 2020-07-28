@@ -2,7 +2,7 @@
 {% block title %}Home Page{% endblock %}
 {% block content %}
 <div class='container'>
-  <div>
+  <!-- <div>
     <div class="col">
       <form action='{{ url_for("search_text")}}' method='post'
             class="form-inline my-2 my-lg-0">
@@ -11,24 +11,24 @@
                placeholder="...SME" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0"
                 type="submit">Search</button>
-                <h5>Ticket Total: {{num_tickets}}</h5>
+        <h5>Ticket Total: {{num_tickets}}</h5>
       </form>
 
     </div>
-  </div>
+  </div> -->
   <div class="row">
-    <table class="table table-light">
+    <table class="table table-light text-align">
       <thead>
         <tr>
-          <th class='text-align' scope="col">Ticket Number</th>
-          <th class class='text-align' scope="col">Summary</th>
+          <th class='text-align' scope="col">Attachments</th>
+          <!-- <th class class='text-align' scope="col">Summary</th> -->
         </tr>
       </thead>
       <tbody>
-        {% for ticket in tickets %}
+        {% for item in merged %}
         <tr>
-          <td><a href="/ticket/{{ticket[2]}}">{{ticket[0]}}</a></td>
-          <td>{{ticket[1]}}</td>
+          <td id='attachment'><a href="{{item[1]}}">{{item[0]}}</a>
+          </td>
         </tr>
         {% endfor %}
       </tbody>

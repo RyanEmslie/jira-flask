@@ -8,12 +8,14 @@
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
           crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css')}}">
     <title>{% block title %}{% endblock %}</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e8e8e8;">
+    <nav class="navbar navbar-expand-lg navbar-light"
+         style="background-color: #e8e8e8;">
         <a class="navbar-brand" href="#">Jira Tickets</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent"
@@ -33,11 +35,15 @@
                               class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/4000">Tickets <span
+                    <a class="nav-link" href="/ticket/4000">Tickets <span
+                              class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/attachments">Attachments <span
                               class="sr-only">(current)</span></a>
                 </li>
             </ul>
-            
+
         </div>
     </nav>
     {% block content %}
