@@ -38,8 +38,6 @@ h5 {
   background-color: #e8e8e8;
   color: black;
   padding: 10px;
-
-  /* overflow: scroll; */
 }
 
 nav {
@@ -52,8 +50,7 @@ p,
 pre,
 h2,
 .list-group {
-  /* box-shadow:         3px 3px 5px 6px rgb(180, 180, 180); */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 0px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn-outline-success {
@@ -75,9 +72,10 @@ h2,
   background-color: #e8e8e8;
 }
 
-/* .form-text-search {
-    box-shadow: none;
-} */
 .list-group-item {
   border: none;
+}
+
+img {
+  max-width: 100%;
 }

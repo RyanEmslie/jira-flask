@@ -27,7 +27,8 @@
       <tbody>
         {% for item in merged %}
         <tr>
-          <td id='attachment'><a href="{{item[1]}}">{{item[0]}}</a>
+          <!-- <td id='attachment'><a href="{{item[1]}}">{{item[0]}}</a> -->
+          <td id='attachment'><a href="{{link}}{{item[0]}}">{{item[0]}}</a>
           </td>
         </tr>
         {% endfor %}

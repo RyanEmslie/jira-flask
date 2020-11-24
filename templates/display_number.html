@@ -2,46 +2,54 @@
 {% block title %}Home Page{% endblock %}
 {% block content %}
 <div class='container'>
-            <ul class="list-group list-group-horizontal">
-                <li class="list-group-item">
-                        <form action='#' method='post' class="form-inline form-text-search">
-                            <input class="form-control mr-sm-2" type="search" name='key'
-                                   placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0"
-                                    type="submit">Search</button>
-                        </form>
-                </li>
-                <li class="list-group-item ">
-                    <div>
-                        <small class="text-muted">Assignee</small>
-                        <h6 class="my-0">{% if assignee %}   
-                            {{ assignee }}
-                        {% else %}      
-                        {%endif %}</h6>
-                    </div>
-                </li>
-                <li class="list-group-item ">
-                    <div>
-                        <small class="text-muted">Reporter</small>
-                        <h6 class="my-0">{{reporter}}</h6>
-                    </div>
-                </li>
-                <li class="list-group-item ">
-                    <div>
-                        <small class="text-muted">Account ID</small>
-                        <h6 class="my-0">{{account_id}}   
-                   </h6>
-                    </div>
-                </li>
-            </ul>
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">
+            <form autocomplete="off" action='#' method='post' class="form-inline form-text-search">
+                <input class="form-control mr-sm-2" type="search" name='key' placeholder="Search"
+                       aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </li>
+        <li class="list-group-item ">
+            <div>
+                <small class="text-muted">Assignee</small>
+                <h6 class="my-0">{% if assignee %}
+                    {{ assignee }}
+                    {% else %}
+                    {%endif %}</h6>
+            </div>
+        </li>
+        <li class="list-group-item ">
+            <div>
+                <small class="text-muted">Reporter</small>
+                <h6 class="my-0">{{reporter}}</h6>
+            </div>
+        </li>
+        <li class="list-group-item ">
+            <div>
+                <small class="text-muted">Account ID</small>
+                <h6 class="my-0">{{account_id}}
+                </h6>
+            </div>
+        </li>
+    </ul>
     <div>
         <div>
-         <h2>FSUPPORT-{{num}}</h2>
+            <h2>FSUPPORT-{{num}}</h2>
             <pre><h5>{{summary}}</h5></pre>
-           <pre> {{description}}</pre>
-           {% for i in commentsArr %}
-           <pre>{{i}}</pre>
+            <pre> {{description}}</pre>
+            {% for i in commentsArr %}
+            <pre>{{i}}</pre>
             {% endfor %}
+            <table>
+                <tbody>
+                    {% for image in imageList %}
+                    <tr>
+                        <td><img src="../static/images/screenshots/{{image}}" /></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

@@ -4,14 +4,12 @@
 <div class='container'>
   <div>
     <div class="col">
-      <form action='{{ url_for("search_text")}}' method='post'
-            class="form-inline my-2 my-lg-0">
+      <form action='{{ url_for("search_text")}}' method='post' class="form-inline my-2 my-lg-0">
         <label for="text_string">Text Search</label>
-        <input class="form-control mr-sm-2" type="search" name='text_string'
-               placeholder="...SME" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0"
-                type="submit">Search</button>
-                <h5>Ticket Total: {{num_tickets}}</h5>
+        <input class="form-control mr-sm-2" type="search" name='text_string' placeholder="...SME"
+               aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <h5>Ticket Total: {{num_tickets}}</h5>
       </form>
 
     </div>
@@ -31,8 +29,10 @@
           <td>{{ticket[1]}}</td>
         </tr>
         {% endfor %}
+
       </tbody>
     </table>
+
   </div>
 </div>
 </div>

@@ -1,3 +1,4 @@
+import time
 import webbrowser
 import pandas as pd
 import itertools
@@ -34,15 +35,15 @@ def getAttachments():
         for item in items:
             if ('http' in item and 'png' in item and '2020' in item):
                 pngs.append(item)
-                print(pngs)
+                # print(pngs)
 
-    print(pngs)
+    # print(pngs)
+    return pngs
 
 
-getAttachments()
+pics2020 = getAttachments()
 
-# urls = ['https://feathr.atlassian.net/secure/attachment/19862/Screen+Shot+2020-07-13+at+3.51.46+PM.png',
-#         'https://feathr.atlassian.net/secure/attachment/19867/Screen+Shot+2020-07-14+at+1.41.29+PM.png', 'https://feathr.atlassian.net/secure/attachment/19816/Screen+Shot+2020-07-07+at+4.36.27+PM.png']
+print(len(pics2020))
 
-# for url in urls:
-#     webbrowser.open_new_tab(url)
+# for x in range(0, len(pics2020)):
+#     webbrowser.open_new_tab(pics2020[x])

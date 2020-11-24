@@ -91,12 +91,7 @@ def getAttachments():
     df_raw = pd.read_csv('total_resolved.csv', mangle_dupe_cols=True)
 
     df_att = df_raw.filter(regex='Attachment*')
-    # df_issue = df_raw.filter(regex='Issue key')
-    # df_con = pd.concat([df_att, df_issue], axis=1)
 
-    # print(df_con)
-    # print(df_att)
-    # # test = []
     df_list = df_att.values.tolist()
     strArr = []
     for list in df_list:
